@@ -8,19 +8,23 @@ angular.module('dttw.menu', [])
     });
 }])
 
-.controller('MenuCtrl', ['$scope', '$state', '$localStorage', '$rootScope', function($scope, $state, $localStorage, $rootScope) {
+.controller('MenuCtrl', ['$scope', '$state', '$localStorage', '$rootScope', 
+                         function($scope, $state, $localStorage, $rootScope) {
+	
 	$scope.onPlayTap = function () {
 		$state.go('game');
 	};
 	
 	if($localStorage.normalMode === undefined){
 		$rootScope.normalMode = true;
+		
 	}else{
 		$rootScope.normalMode = $localStorage.normalMode;
 	}
 	
 	if(!$localStorage.highScore){
 		$scope.highScore = 0;
+		
 	}else{
 		$scope.highScore = $localStorage.highScore;
 	}
@@ -29,4 +33,5 @@ angular.module('dttw.menu', [])
 		$localStorage.normalMode = $scope.normalMode;
 		$rootScope.normalMode = $scope.normalMode;
 	}
+	
 }]);
