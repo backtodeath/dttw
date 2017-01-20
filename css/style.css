@@ -55,10 +55,21 @@ html, body {
 	color: #313437;
 	border-color: #313437;
 }
-	.button.play.activated {
-		color: #FFFFFF;
-		background-color: #313437;
-	}
+
+.button.play.activated {
+	color: #FFFFFF;
+	background-color: #313437;
+}
+
+.toggle-button {
+	position: absolute;
+	left: -webkit-calc(25% - 60px);
+	bottom: 18%;
+	font-size: 50px;
+	line-height: 80px;
+	color: #313437;
+	border-color: #313437;
+}
 
 
 .view-port {
@@ -178,4 +189,28 @@ html, body {
 .flash {
 	-webkit-animation: flash 1s infinite;
 			animation: flash 1s infinite;
+}
+
+.toggle-on{
+	background-color: lightsalmon;
+}
+
+.toggle-off{
+	background-color: lightblue;
+}
+
+.normal-mode{
+	color:white;
+	width: 50%;
+	position:absolute;
+	bottom:30%;
+	font-size:18px;
+}
+
+.insane-mode{
+	color:white;
+	width: 50%;
+	position:absolute;
+	bottom:5%;
+	font-size:18px;
 }

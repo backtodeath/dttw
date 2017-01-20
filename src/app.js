@@ -3,8 +3,8 @@ angular.module('dttw', [
   'ui.router',
   'ngStorage',
   'dttw.menu',
-  'dttw.game'
-
+  'dttw.game',
+  'ui.toggle'
   ])
 
 .config(['$urlRouterProvider', function($urlRouterProvider) {

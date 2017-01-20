@@ -7,11 +7,16 @@ angular.module('dttw.game')
 		replace: true,
 		templateUrl: 'src/game/gameboard/gameboard.html',
 		controller: function($scope, $element, $attrs, $transclude) {
-			var framerate    = 1000/60, //60 fps
+			var framerate    = 1000/60,
 				framerateInterval,
-				gameSpeed = 1.05;
+				gameSpeed = 1.05,
+				speedInterval;
 
 			$scope.rows = [];
+			
+			function increaseSpeed(){
+				gameSpeed = gameSpeed + 0.05;
+			}
 
 			function getRandomInt(min, max) {
 				return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -56,10 +61,14 @@ angular.module('dttw.game')
 
 			$scope.startGame = function () {
 				framerateInterval = setInterval(updatePosition, framerate);
+				if(!$scope.normalMode){
+					speedInterval = setInterval(increaseSpeed, 2000);	
+				}
 			};
 
 			$scope.stopGame = function () {
 				clearInterval(framerateInterval);
+				clearInterval(speedInterval);
 			};
 
 			$scope.$on('$destroy', destroy);
