@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/dttw" version="1.0.1" viewmodes="fullscreen">
-    <tizen:application id="qeGMSdGU9T.Donttapthewhite" package="qeGMSdGU9T" required_version="2.3"/>
+    <tizen:application id="UNOaW1YE8R.Donttapthewhite" package="UNOaW1YE8R" required_version="2.3"/>
     <author email="lirolaluis@gmail.com">Luis Lirola</author>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="dttw_117.png" height="117" width="117"/>
-    <name>Don't tap the white</name>
+    <name>Tab the black pine</name>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
     <tizen:profile name="mobile"/>
     <tizen:setting screen-orientation="portrait" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
 </widget>

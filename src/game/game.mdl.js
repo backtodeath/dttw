@@ -8,8 +8,18 @@ angular.module('dttw.game', [])
     });
 }])
 
-.controller('GameCtrl', ['$scope', '$state', '$ionicPopup', '$timeout', '$localStorage',  
-                         function($scope, $state, $ionicPopup, $timeout, $localStorage) {
+.controller('GameCtrl', ['$scope', '$state', '$ionicPopup', '$timeout', '$localStorage','$rootScope', 
+                         function($scope, $state, $ionicPopup, $timeout, $localStorage, $rootScope) {
+     
+     var buttonEvent = function(e) {
+ 		if (e.keyName == "back") {
+ 			$rootScope.toShow = false;
+ 			gotoMenu();
+ 		}
+ 	}
+     
+     document.addEventListener( 'tizenhwkey', buttonEvent );
+	
 	$scope.score = 0;
 	$scope.showCountdown = true;
 	$scope.countdown = 'ready?';

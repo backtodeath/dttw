@@ -132,6 +132,10 @@ html, body {
 	font-size: 22px;
 }
 
+.apps-button{
+	padding:0px!important;
+}
+
 .highscore {
 	display: block;
 	width: 100%;
